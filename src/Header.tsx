@@ -67,7 +67,7 @@ export const Header = () => {
 
         <form
           onSubmit={handleSubmit}
-          className="mx-auto mb-[10rem] max-w-[22rem] px-4 sm:mb-16 md:max-w-lg"
+          className="mx-auto mb-[12rem] max-w-[22rem] px-4 sm:mb-16 md:max-w-lg"
         >
           <div className="flex">
             <input
