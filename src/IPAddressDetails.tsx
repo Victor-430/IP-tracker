@@ -1,4 +1,7 @@
+import { toast, ToastContainer } from "react-toastify";
+
 import { IpifyResponse } from "./types";
+import { useEffect } from "react";
 
 interface IpDataProps {
   ipData: IpifyResponse | null;
@@ -6,12 +9,14 @@ interface IpDataProps {
 }
 
 export const IPAddressDetails = ({ ipData, error }: IpDataProps) => {
+  useEffect(() => {
+    if (error) {
+      toast.error(error);
+    }
+  }, [error]);
+
   if (!ipData) {
-    return error ? (
-      <div className="absolute left-0 right-0 mx-4 mb-4 rounded border border-red-400 bg-red-100 px-4 py-3 text-red-700">
-        {error}
-      </div>
-    ) : null;
+    return <ToastContainer />;
   }
 
   return (
@@ -51,6 +56,7 @@ export const IPAddressDetails = ({ ipData, error }: IpDataProps) => {
           </p>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

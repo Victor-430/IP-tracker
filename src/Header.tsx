@@ -5,6 +5,7 @@ import { IPAddressDetails } from "./IPAddressDetails";
 
 import { MapDisplay } from "./MapDisplay";
 import type { LatLngExpression } from "leaflet";
+import { ArrowRight } from "lucide-react";
 
 const IPIFY_API_KEY = import.meta.env.VITE_IPIFY_API_KEY;
 console.log(IPIFY_API_KEY);
@@ -85,11 +86,7 @@ export const Header = () => {
               aria-label="submit search"
               disabled={isLoading}
             >
-              <img
-                className="hover:translate-x-1"
-                alt="search button"
-                src="../src/assets/images/icon-arrow.svg"
-              />
+              <ArrowRight className="hover:translate-x-1" />
             </button>
           </div>
         </form>
