@@ -86,7 +86,7 @@ export const Header = () => {
               aria-label="submit search"
               disabled={isLoading}
             >
-              <ArrowRight className="hover:translate-x-1" />
+              <ArrowRight className="text-white hover:translate-x-1" />
             </button>
           </div>
         </form>
